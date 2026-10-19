@@ -1,0 +1,11 @@
+# internal working notes — not for the client's eyes
+brand-spec.md
+DESIGN.md
+
+# original full-size downloads from the Google profile, re-derivable; img/ holds the shipped WebP
+maps-photos/
+
+# sales pitch — mine, not part of the client's site
+pitch/
+
+.DS_Store
