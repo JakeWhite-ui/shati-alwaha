@@ -1,0 +1,31 @@
+{
+  "_note": "CATALOGUE PREVIEW. The six brands below are real — they are read off SHATI ALWAHA's own signboard. The size list is a set of standard fitments common in the UAE, used to demonstrate the size finder. It is NOT a statement of what is on the shelf today, and no price is quoted anywhere. Replace `tyres` with the real stock list and fill `price` in AED; the site reads this file directly, no code changes needed.",
+  "_pricesPending": true,
+  "_stockPending": true,
+  "_brandsSource": "Signboard at 172 Ras Al Khor St, photographed from the Google Business profile",
+  "brands": ["Michelin", "Bridgestone", "Yokohama", "Dunlop", "Arivo", "Vitour"],
+  "tyres": [
+    { "id": "t01", "width": 185, "profile": 65, "rim": 15, "load": 88, "speed": "H", "use": "Passenger", "brands": ["Dunlop", "Arivo", "Vitour"], "price": null },
+    { "id": "t02", "width": 195, "profile": 65, "rim": 15, "load": 91, "speed": "V", "use": "Passenger", "brands": ["Michelin", "Dunlop", "Arivo"], "price": null },
+    { "id": "t03", "width": 205, "profile": 55, "rim": 16, "load": 91, "speed": "V", "use": "Passenger", "brands": ["Michelin", "Bridgestone", "Yokohama", "Dunlop"], "price": null },
+    { "id": "t04", "width": 205, "profile": 60, "rim": 16, "load": 92, "speed": "H", "use": "Passenger", "brands": ["Bridgestone", "Dunlop", "Vitour"], "price": null },
+    { "id": "t05", "width": 215, "profile": 60, "rim": 16, "load": 95, "speed": "V", "use": "Passenger", "brands": ["Michelin", "Yokohama", "Arivo"], "price": null },
+    { "id": "t06", "width": 215, "profile": 55, "rim": 17, "load": 94, "speed": "V", "use": "Passenger", "brands": ["Michelin", "Bridgestone", "Yokohama"], "price": null },
+    { "id": "t07", "width": 225, "profile": 45, "rim": 17, "load": 94, "speed": "W", "use": "Passenger", "brands": ["Michelin", "Yokohama", "Vitour"], "price": null },
+    { "id": "t08", "width": 225, "profile": 50, "rim": 17, "load": 98, "speed": "V", "use": "Passenger", "brands": ["Bridgestone", "Dunlop", "Arivo"], "price": null },
+    { "id": "t09", "width": 235, "profile": 45, "rim": 18, "load": 98, "speed": "W", "use": "Passenger", "brands": ["Michelin", "Bridgestone", "Yokohama"], "price": null },
+    { "id": "t10", "width": 225, "profile": 65, "rim": 17, "load": 102, "speed": "H", "use": "SUV", "brands": ["Bridgestone", "Dunlop", "Arivo"], "price": null },
+    { "id": "t11", "width": 235, "profile": 55, "rim": 18, "load": 104, "speed": "V", "use": "SUV", "brands": ["Michelin", "Bridgestone", "Yokohama"], "price": null },
+    { "id": "t12", "width": 235, "profile": 60, "rim": 18, "load": 107, "speed": "V", "use": "SUV", "brands": ["Michelin", "Dunlop", "Vitour"], "price": null },
+    { "id": "t13", "width": 245, "profile": 60, "rim": 18, "load": 105, "speed": "H", "use": "SUV", "brands": ["Bridgestone", "Yokohama", "Arivo"], "price": null },
+    { "id": "t14", "width": 255, "profile": 55, "rim": 18, "load": 109, "speed": "V", "use": "SUV", "brands": ["Michelin", "Bridgestone", "Dunlop"], "price": null },
+    { "id": "t15", "width": 265, "profile": 65, "rim": 17, "load": 112, "speed": "T", "use": "SUV", "brands": ["Dunlop", "Arivo", "Vitour"], "price": null },
+    { "id": "t16", "width": 265, "profile": 60, "rim": 18, "load": 110, "speed": "H", "use": "SUV", "brands": ["Michelin", "Bridgestone", "Yokohama", "Dunlop"], "price": null },
+    { "id": "t17", "width": 275, "profile": 55, "rim": 20, "load": 117, "speed": "H", "use": "SUV", "brands": ["Michelin", "Bridgestone", "Vitour"], "price": null },
+    { "id": "t18", "width": 285, "profile": 50, "rim": 20, "load": 112, "speed": "V", "use": "SUV", "brands": ["Michelin", "Yokohama", "Arivo"], "price": null },
+    { "id": "t19", "width": 195, "profile": 70, "rim": 15, "load": 104, "speed": "R", "use": "Van", "brands": ["Bridgestone", "Dunlop", "Vitour"], "price": null },
+    { "id": "t20", "width": 215, "profile": 70, "rim": 15, "load": 109, "speed": "S", "use": "Van", "brands": ["Dunlop", "Arivo", "Vitour"], "price": null },
+    { "id": "t21", "width": 245, "profile": 40, "rim": 19, "load": 98, "speed": "Y", "use": "Performance", "brands": ["Michelin", "Yokohama", "Bridgestone"], "price": null },
+    { "id": "t22", "width": 255, "profile": 35, "rim": 20, "load": 97, "speed": "Y", "use": "Performance", "brands": ["Michelin", "Yokohama"], "price": null }
+  ]
+}

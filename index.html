@@ -188,6 +188,37 @@ section{padding-block:clamp(80px,11vw,128px);position:relative}
 .shots2 .shot:first-child{aspect-ratio:4/3}
 .shots2 .shot:last-child{aspect-ratio:3/4}
 
+/* ---------- shop / size finder ---------- */
+.shopbar{display:grid;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));gap:14px;margin-top:40px;align-items:end}
+.shopnote{margin-top:18px;border:1px solid var(--hairline);border-inline-start:3px solid var(--accent);
+  border-radius:0 12px 12px 0;padding:14px 18px;font-size:.9375rem;line-height:1.55;color:var(--ink-2);max-width:none}
+.shopcount{margin-top:26px;display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.shopcount b{font-family:var(--font-display);font-size:1.6rem;color:var(--ink);font-weight:700}
+.rows{margin-top:16px;display:grid;gap:1px;background:var(--hairline);border:1px solid var(--hairline);
+  border-radius:16px;overflow:hidden}
+.rowhead,.trow{display:grid;grid-template-columns:minmax(0,1.3fr) .8fr .7fr minmax(0,1.6fr) auto;
+  gap:14px;align-items:center;background:var(--card);padding:14px 20px}
+.rowhead{background:var(--surface);font-size:var(--t-meta);letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-3);font-weight:500}
+.trow{transition:background .18s}
+.trow:hover{background:var(--card-hi)}
+.trow .sz{font-family:var(--font-display);font-size:1.0625rem;font-weight:700;color:var(--ink);letter-spacing:-.01em}
+.trow .ix,.trow .us{font-size:.9375rem;color:var(--ink-2)}
+.trow .br{display:flex;flex-wrap:wrap;gap:6px}
+.trow .br i{font-style:normal;font-size:.75rem;font-weight:600;color:var(--ink-2);
+  border:1px solid var(--hairline);border-radius:999px;padding:3px 9px;white-space:nowrap}
+.pick{min-height:44px;padding:9px 18px;border-radius:999px;border:1px solid var(--hairline);
+  background:none;color:var(--ink);font:inherit;font-size:.875rem;font-weight:600;cursor:pointer;
+  white-space:nowrap;transition:all .18s}
+.pick:hover{border-color:var(--accent);color:var(--accent-text)}
+.pick:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.empty{background:var(--card);padding:34px 20px;text-align:center;color:var(--ink-3)}
+@media(max-width:820px){
+  .rowhead{display:none}
+  .trow{grid-template-columns:1fr;gap:9px;padding:18px 20px}
+  .trow .pick{justify-self:start;width:100%}
+}
+
 /* ---------- order sheet ---------- */
 .sheet{margin-top:44px;border:1px solid var(--hairline);border-radius:18px;background:var(--card);
   padding:clamp(22px,3vw,36px);box-shadow:var(--emboss)}
@@ -291,6 +322,7 @@ footer{border-top:1px solid var(--hairline);padding-block:40px}
       <a href="#undertaking">Warranty</a>
       <a href="#routes">How to buy</a>
       <a href="#work">What we do</a>
+      <a href="#shop">Shop</a>
       <a href="#order">Order</a>
       <a href="#visit">Visit</a>
     </div>
@@ -311,6 +343,7 @@ footer{border-top:1px solid var(--hairline);padding-block:40px}
   <a href="#undertaking">Warranty</a>
   <a href="#routes">How to buy</a>
   <a href="#work">What we do</a>
+  <a href="#shop">Shop</a>
   <a href="#order">Order</a>
   <a href="#visit">Visit</a>
   <a href="ar/" hreflang="ar" lang="ar">العربية</a>
@@ -461,9 +494,39 @@ footer{border-top:1px solid var(--hairline);padding-block:40px}
   </div>
 </section>
 
+<section id="shop">
+  <div class="wrap">
+    <p class="num" data-reveal>04 — The shop</p>
+    <h2 data-reveal style="margin-top:14px">Find your size.</h2>
+    <p data-reveal style="margin-top:18px">Filter by what you drive and what you need. Pick a line and it drops straight into the order sheet below.</p>
+
+    <div class="shopbar" data-reveal>
+      <div class="fld"><label for="f-brand">Brand</label><select id="f-brand"></select></div>
+      <div class="fld"><label for="f-use">Vehicle</label><select id="f-use"></select></div>
+      <div class="fld"><label for="f-rim">Rim</label><select id="f-rim"></select></div>
+      <div class="fld"><label for="f-width">Width</label><select id="f-width"></select></div>
+      <div class="fld"><button type="button" class="pick" id="f-reset" style="width:100%;min-height:48px">Clear filters</button></div>
+    </div>
+
+    <p class="shopnote" data-reveal>The six brands are real — they are painted on the signboard above the shop. <b>The size list is a preview</b>, not today's shelf, and no price is shown anywhere: the shop has never published one. Call to confirm a size is in and what it costs.</p>
+
+    <div class="shopcount" data-reveal>
+      <span><b id="s-count">—</b> <span class="meta" id="s-word">sizes</span></span>
+      <span class="meta">Price on the phone · 04 239 0214</span>
+    </div>
+
+    <div class="rows" data-reveal>
+      <div class="rowhead">
+        <span>Size</span><span>Load / speed</span><span>Fits</span><span>Brands on the board</span><span></span>
+      </div>
+      <div id="s-rows"></div>
+    </div>
+  </div>
+</section>
+
 <section id="order" style="background:var(--surface)">
   <div class="wrap">
-    <p class="num" data-reveal>04 — Order sheet</p>
+    <p class="num" data-reveal>05 — Order sheet</p>
     <h2 data-reveal style="margin-top:14px">Get the size right first.</h2>
     <p data-reveal style="margin-top:18px">Your size is moulded into the side of the tyre you already have — something like 205/55 R16. Read it off, set it below, and this sheet writes the request for you, delivery included.</p>
 
@@ -527,7 +590,7 @@ footer{border-top:1px solid var(--hairline);padding-block:40px}
 
 <section id="visit">
   <div class="wrap">
-    <p class="num" data-reveal>05 — Visit</p>
+    <p class="num" data-reveal>06 — Visit</p>
     <h2 data-reveal style="margin-top:14px">Ras Al Khor Industrial Area 2.</h2>
 
     <div class="visit">
@@ -691,6 +754,77 @@ footer{border-top:1px solid var(--hairline);padding-block:40px}
       });
     });
   }
+
+  /* ---- shop. Reads catalog.json so the owner can swap in the real stock
+          list and prices without anyone touching this file ---- */
+  (function(){
+    var rows=document.getElementById("s-rows"); if(!rows)return;
+    var fb=document.getElementById("f-brand"),fu=document.getElementById("f-use"),
+        fr=document.getElementById("f-rim"),fw=document.getElementById("f-width"),
+        count=document.getElementById("s-count"),word=document.getElementById("s-word");
+    var data=[];
+
+    function opts(sel,label,vals,suffix){
+      var h='<option value="">'+label+"</option>";
+      vals.forEach(function(v){h+='<option value="'+v+'">'+v+(suffix||"")+"</option>"});
+      sel.innerHTML=h;
+    }
+    var uniq=function(a){return a.filter(function(v,i){return a.indexOf(v)===i})};
+    var esc=function(t){return String(t).replace(/[&<>"]/g,function(c){
+      return({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"})[c]})};
+
+    function draw(){
+      var b=fb.value,u=fu.value,r=fr.value,w=fw.value;
+      var hit=data.filter(function(t){
+        return (!b||t.brands.indexOf(b)>-1)&&(!u||t.use===u)&&
+               (!r||t.rim===+r)&&(!w||t.width===+w);
+      });
+      count.textContent=hit.length;
+      word.textContent=hit.length===1?"size":"sizes";
+      if(!hit.length){
+        rows.innerHTML='<div class="empty">Nothing in the preview list matches that combination. Call 04 239 0214 — the shelf is wider than this page.</div>';
+        return;
+      }
+      rows.innerHTML=hit.map(function(t){
+        var size=t.width+"/"+t.profile+" R"+t.rim;
+        return '<div class="trow">'+
+          '<span class="sz">'+size+'</span>'+
+          '<span class="ix">'+t.load+t.speed+'</span>'+
+          '<span class="us">'+esc(t.use)+'</span>'+
+          '<span class="br">'+t.brands.map(function(x){return "<i>"+esc(x)+"</i>"}).join("")+'</span>'+
+          '<button type="button" class="pick" data-w="'+t.width+'" data-p="'+t.profile+'" data-r="'+t.rim+
+          '" aria-label="Use '+size+' in the order sheet">Use this size</button>'+
+        '</div>';
+      }).join("");
+    }
+
+    rows.addEventListener("click",function(e){
+      var b=e.target.closest(".pick"); if(!b)return;
+      var W=document.getElementById("w"),A=document.getElementById("a"),R=document.getElementById("r");
+      if(!W)return;
+      W.value=b.dataset.w; A.value=b.dataset.p; R.value=b.dataset.r;
+      W.dispatchEvent(new Event("change"));
+      document.getElementById("order").scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"});
+      b.textContent="Added"; setTimeout(function(){b.textContent="Use this size"},1600);
+    });
+
+    [fb,fu,fr,fw].forEach(function(s){s.addEventListener("change",draw)});
+    document.getElementById("f-reset").addEventListener("click",function(){
+      fb.value=fu.value=fr.value=fw.value=""; draw();
+    });
+
+    fetch("catalog.json?v=1").then(function(r){return r.json()}).then(function(j){
+      data=j.tyres||[];
+      opts(fb,"Any brand",j.brands||[]);
+      opts(fu,"Any vehicle",uniq(data.map(function(t){return t.use})));
+      opts(fr,"Any rim",uniq(data.map(function(t){return t.rim})).sort(function(a,b){return a-b}),'"');
+      opts(fw,"Any width",uniq(data.map(function(t){return t.width})).sort(function(a,b){return a-b}));
+      draw();
+    }).catch(function(){
+      rows.innerHTML='<div class="empty">The size list could not be loaded. Call 04 239 0214 and we will check the size for you.</div>';
+      count.textContent="0";
+    });
+  })();
 
   /* ---- order sheet. Pure sidewall geometry — no prices exist to calculate ---- */
   (function(){
