@@ -190,6 +190,46 @@ section{padding-block:clamp(80px,11vw,128px);position:relative}
 .shots2 .shot:first-child{aspect-ratio:4/3}
 .shots2 .shot:last-child{aspect-ratio:3/4}
 
+/* ---------- order sheet ---------- */
+.sheet{margin-top:44px;border:1px solid var(--hairline);border-radius:18px;background:var(--card);
+  padding:clamp(22px,3vw,36px);box-shadow:var(--emboss)}
+.sheet h3{margin-bottom:4px}
+.sheet .hint{font-size:.9375rem;color:var(--ink-3);max-width:62ch}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:14px;margin-top:18px}
+.fld{display:flex;flex-direction:column;gap:7px;min-width:0}
+.fld label{font-size:var(--t-meta);letter-spacing:.04em;color:var(--ink-3);font-weight:600}
+.fld select,.fld input{appearance:none;-webkit-appearance:none;width:100%;min-height:48px;padding:12px 14px;
+  border-radius:12px;border:1px solid var(--hairline);background:var(--surface);color:var(--ink);
+  font:inherit;font-size:1rem;transition:border-color .18s}
+.fld select{background-image:linear-gradient(45deg,transparent 50%,currentColor 50%),linear-gradient(135deg,currentColor 50%,transparent 50%);
+  background-position:19px calc(50% + 2px),24px calc(50% + 2px);
+  background-size:5px 5px,5px 5px;background-repeat:no-repeat;padding-inline-start:38px;padding-inline-end:14px}
+.fld select:hover,.fld input:hover{border-color:var(--hairline-2)}
+.fld select:focus-visible,.fld input:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-color:var(--accent)}
+.readout{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--hairline);
+  border:1px solid var(--hairline);border-radius:14px;overflow:hidden;margin-top:24px}
+.readout div{background:var(--surface);padding:15px 18px}
+.readout b{display:block;font-size:var(--t-meta);letter-spacing:.04em;
+  color:var(--ink-3);font-weight:500;margin-bottom:5px}
+.readout span{font-family:var(--font-display);font-size:1.35rem;font-weight:700;color:var(--ink);letter-spacing:-.01em}
+.warn{margin-top:14px;font-size:.9375rem;line-height:1.55;color:var(--ink-2)}
+.warn b{color:var(--accent-text);font-weight:600}
+.seg{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.seg label{position:relative;cursor:pointer}
+.seg input{position:absolute;inset:0;opacity:0;width:100%;height:100%;cursor:pointer;margin:0}
+.seg span{display:inline-flex;align-items:center;min-height:48px;padding:12px 22px;border-radius:999px;
+  border:1px solid var(--hairline);color:var(--ink);font-weight:600;font-size:.9375rem;transition:all .18s}
+.seg input:checked+span{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.seg input:focus-visible+span{outline:2px solid var(--accent);outline-offset:3px}
+.subfld{margin-top:16px;display:none}
+.subfld.on{display:block}
+.out{width:100%;min-height:168px;margin-top:22px;padding:16px 18px;border-radius:14px;
+  border:1px solid var(--hairline);background:var(--surface);color:var(--ink);
+  font:inherit;font-size:.9375rem;line-height:1.65;resize:vertical}
+.out:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.sheet-act{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;align-items:center}
+.sheet-note{font-size:var(--t-meta);letter-spacing:.02em;color:var(--ink-3);margin-top:16px}
+
 .visit{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);margin-top:48px;align-items:start}
 .facts{display:grid;gap:1px;background:var(--hairline);border:1px solid var(--hairline);border-radius:18px;overflow:hidden}
 .fact{background:var(--card);padding:20px 24px}
@@ -253,6 +293,7 @@ footer{border-top:1px solid var(--hairline);padding-block:40px}
       <a href="#undertaking">الضمان</a>
       <a href="#routes">طرق الشراء</a>
       <a href="#work">خدماتنا</a>
+      <a href="#order">الطلب</a>
       <a href="#visit">زورونا</a>
     </div>
     <div class="navtools">
@@ -272,6 +313,7 @@ footer{border-top:1px solid var(--hairline);padding-block:40px}
   <a href="#undertaking">الضمان</a>
   <a href="#routes">طرق الشراء</a>
   <a href="#work">خدماتنا</a>
+  <a href="#order">الطلب</a>
   <a href="#visit">زورونا</a>
   <a href="../" hreflang="en" lang="en">English</a>
 </div>
@@ -387,8 +429,8 @@ footer{border-top:1px solid var(--hairline);padding-block:40px}
 <section id="work">
   <div class="wrap">
     <p class="num" data-reveal>03 — خدماتنا</p>
-    <h2 data-reveal style="margin-top:14px">سبع خدمات تحت سقف واحد.</h2>
-    <p data-reveal style="margin-top:18px">لسنا كاونتر فقط. في الورشة رافعة، وهذه هي الخدمات المكتوبة على لافتتنا.</p>
+    <h2 data-reveal style="margin-top:14px">سبع خدمات تحت سقف واحد — ونوصل أيضًا.</h2>
+    <p data-reveal style="margin-top:18px">لسنا كاونتر فقط. في الورشة رافعة. الخدمات السبع الأولى مكتوبة على لافتتنا، والتوصيل هو الثامنة، للطلبات التي لا تصل إلى المحل أصلًا.</p>
 
     <ul class="svc" data-reveal>
       <li>الاطارات</li>
@@ -398,6 +440,7 @@ footer{border-top:1px solid var(--hairline);padding-block:40px}
       <li>بطارية</li>
       <li>تغيير زيت</li>
       <li>الاصلاح</li>
+      <li>التوصيل</li>
     </ul>
 
     <div class="shots2">
@@ -420,9 +463,73 @@ footer{border-top:1px solid var(--hairline);padding-block:40px}
   </div>
 </section>
 
-<section id="visit" style="background:var(--surface)">
+<section id="order" style="background:var(--surface)">
   <div class="wrap">
-    <p class="num" data-reveal>04 — زورونا</p>
+    <p class="num" data-reveal>04 — ورقة الطلب</p>
+    <h2 data-reveal style="margin-top:14px">ابدأ بالمقاس الصحيح.</h2>
+    <p data-reveal style="margin-top:18px">مقاسك محفور على جانب إطارك الحالي — شيء مثل <span class="ltr">205/55 R16</span>. اقرأه، اضبطه بالأسفل، وستكتب لك هذه الورقة الطلب كاملًا، مع التوصيل.</p>
+
+    <div class="sheet" data-reveal>
+      <h3>إطارك</h3>
+      <p class="hint">ثلاثة أرقام على جانب الإطار: العرض بالمليمتر، ثم النسبة، ثم مقاس الجنط بعد حرف <span class="ltr">R</span>.</p>
+
+      <div class="row">
+        <div class="fld"><label for="w">العرض</label><select id="w"></select></div>
+        <div class="fld"><label for="a">النسبة</label><select id="a"></select></div>
+        <div class="fld"><label for="r">الجنط</label><select id="r"></select></div>
+        <div class="fld"><label for="q">الكمية</label>
+          <select id="q"><option>1</option><option>2</option><option selected>4</option><option>5</option><option>6</option></select></div>
+      </div>
+
+      <div class="readout">
+        <div><b>مقاسك</b><span id="o-size" class="ltr">—</span></div>
+        <div><b>القطر الكلي</b><span id="o-dia" class="ltr">—</span></div>
+        <div><b>محيط الدوران</b><span id="o-cir" class="ltr">—</span></div>
+        <div><b>دورات لكل كيلومتر</b><span id="o-rev" class="ltr">—</span></div>
+      </div>
+
+      <div style="margin-top:28px">
+        <h3>تفكّر في مقاس آخر؟</h3>
+        <p class="hint">اختياري. غيّر أي رقم بالأسفل وسنخبرك كم يزيح ذلك عدّاد السرعة.</p>
+        <div class="row">
+          <div class="fld"><label for="w2">العرض</label><select id="w2"></select></div>
+          <div class="fld"><label for="a2">النسبة</label><select id="a2"></select></div>
+          <div class="fld"><label for="r2">الجنط</label><select id="r2"></select></div>
+        </div>
+        <p class="warn" id="o-cmp">نفس المقاس أعلاه — لا شيء يتغيّر.</p>
+      </div>
+
+      <div style="margin-top:28px">
+        <h3>كيف تريد استلامها؟</h3>
+        <div class="seg" role="radiogroup" aria-label="كيف تريد استلامها">
+          <label><input type="radio" name="route" value="في المحل — التركيب أثناء الانتظار" checked><span>في المحل</span></label>
+          <label><input type="radio" name="route" value="الاستلام من المحل"><span>الاستلام</span></label>
+          <label><input type="radio" name="route" value="التوصيل"><span>التوصيل</span></label>
+        </div>
+        <div class="subfld" id="ship">
+          <div class="row">
+            <div class="fld" style="grid-column:1/-1"><label for="addr">إلى أين نوصل؟</label>
+              <input id="addr" type="text" autocomplete="street-address" placeholder="المنطقة في دبي، أو اسم الشركة"></div>
+          </div>
+          <p class="warn">نطاق التوصيل ومدته يتم تأكيدهما في المكالمة — <b>المحل لم ينشرهما بعد</b>.</p>
+        </div>
+      </div>
+
+      <label for="out" class="sr-only">طلبك</label>
+      <textarea id="out" class="out" readonly></textarea>
+
+      <div class="sheet-act">
+        <button type="button" class="btn btn-ghost" id="copyreq">انسخ الطلب</button>
+        <a href="tel:+97142390214" class="btn btn-solid">اتصل <span class="ltr">04 239 0214</span></a>
+      </div>
+      <p class="sheet-note">هذه الورقة لا تحسب السعر. المحل ليس لديه قائمة أسعار منشورة — اقرأ الطلب في المكالمة وسيحدّدون لك السعر.</p>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <p class="num" data-reveal>05 — زورونا</p>
     <h2 data-reveal style="margin-top:14px">رأس الخور الصناعية 2.</h2>
 
     <div class="visit">
@@ -570,6 +677,85 @@ footer{border-top:1px solid var(--hairline);padding-block:40px}
       });
     });
   }
+
+  /* ---- order sheet. Pure sidewall geometry — no prices exist to calculate ---- */
+  (function(){
+    var W=document.getElementById("w"); if(!W)return;
+    var A=document.getElementById("a"),R=document.getElementById("r"),Q=document.getElementById("q"),
+        W2=document.getElementById("w2"),A2=document.getElementById("a2"),R2=document.getElementById("r2"),
+        ship=document.getElementById("ship"),addr=document.getElementById("addr"),out=document.getElementById("out");
+
+    function fill(sel,from,to,step,def,suffix){
+      var h="";
+      for(var v=from;v<=to;v+=step)h+='<option value="'+v+'"'+(v===def?" selected":"")+">"+v+(suffix||"")+"</option>";
+      sel.innerHTML=h;
+    }
+    [W,W2].forEach(function(s){fill(s,135,355,5,205)});
+    [A,A2].forEach(function(s){fill(s,25,85,5,55)});
+    [R,R2].forEach(function(s){fill(s,12,24,1,16)});  /* без дюймовой кавычки: в RTL она уезжает влево */
+
+    function geom(w,a,r){
+      var d=r*25.4+2*(w*a/100);
+      return {d:d,c:Math.PI*d,rev:1e6/(Math.PI*d)};
+    }
+    var fmt=function(n,p){return n.toLocaleString("en-GB",{maximumFractionDigits:p||0})};
+
+    function render(){
+      var w=+W.value,a=+A.value,r=+R.value,g=geom(w,a,r);
+      var size=w+"/"+a+" R"+r;
+      document.getElementById("o-size").textContent=size;
+      document.getElementById("o-dia").textContent=fmt(g.d)+" مم";
+      document.getElementById("o-cir").textContent=fmt(g.c)+" مم";
+      document.getElementById("o-rev").textContent=fmt(g.rev);
+
+      var w2=+W2.value,a2=+A2.value,r2=+R2.value,alt=(w2!==w||a2!==a||r2!==r);
+      var size2=w2+"/"+a2+" R"+r2, cmp=document.getElementById("o-cmp"), diff=0;
+      if(!alt){
+        cmp.innerHTML="نفس المقاس أعلاه — لا شيء يتغيّر.";
+      }else{
+        var g2=geom(w2,a2,r2);
+        diff=(g2.d-g.d)/g.d*100;
+        var shown=100*g.d/g2.d;
+        var verdict = Math.abs(diff)<=3
+          ? "<b>ضمن حدود الـ3% المعتادة.</b> يبقى التأكد من ملاءمته لسيارتك."
+          : "<b>خارج حدود الـ3%</b> التي تسمح بها أغلب الشركات — راجعنا قبل الشراء.";
+        cmp.innerHTML='<span class="ltr">'+size2+'</span> ارتفاعه <span class="ltr">'+fmt(g2.d)+
+          ' مم</span>، بفارق <span class="ltr">'+(diff>0?"+":"")+diff.toFixed(1)+
+          '%</span> عن <span class="ltr">'+size+'</span>. عند سرعة حقيقية <span class="ltr">100 كم/س</span> سيقرأ عدّادك نحو <span class="ltr">'+
+          shown.toFixed(0)+' كم/س</span>. '+verdict;
+      }
+
+      var route=document.querySelector('input[name="route"]:checked');
+      var isShip=route.value==="التوصيل";
+      ship.classList.toggle("on",isShip);
+
+      var lines=["مرحبًا شاطى الواحة، أرغب في عرض سعر.",
+                 "","المقاس: "+size,"الكمية: "+Q.value];
+      if(alt)lines.push("أفكر أيضًا في: "+size2+" (فرق القطر "+(diff>0?"+":"")+diff.toFixed(1)+"%)");
+      lines.push("");
+      if(isShip){
+        lines.push("التوصيل إلى: "+((addr.value||"").trim()||"[المنطقة أو اسم الشركة]"));
+        lines.push("يرجى تأكيد التغطية والمدة والسعر.");
+      }else{
+        lines.push(route.value);
+        lines.push("يرجى تأكيد التوفّر والسعر.");
+      }
+      out.value=lines.join("\n");
+    }
+
+    [W,A,R,Q,W2,A2,R2,addr].forEach(function(el){
+      el.addEventListener("input",render); el.addEventListener("change",render);
+    });
+    document.querySelectorAll('input[name="route"]').forEach(function(el){el.addEventListener("change",render)});
+
+    var cb=document.getElementById("copyreq");
+    cb.addEventListener("click",function(){
+      navigator.clipboard.writeText(out.value).then(function(){
+        cb.textContent="تم النسخ"; setTimeout(function(){cb.textContent="انسخ الطلب"},1600);
+      },function(){ out.focus(); out.select(); });
+    });
+    render();
+  })();
 
   var svg=document.getElementById("sidewall"),art=document.querySelector(".hero-art");
   function fitWheel(){

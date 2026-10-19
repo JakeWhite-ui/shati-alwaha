@@ -188,6 +188,46 @@ section{padding-block:clamp(80px,11vw,128px);position:relative}
 .shots2 .shot:first-child{aspect-ratio:4/3}
 .shots2 .shot:last-child{aspect-ratio:3/4}
 
+/* ---------- order sheet ---------- */
+.sheet{margin-top:44px;border:1px solid var(--hairline);border-radius:18px;background:var(--card);
+  padding:clamp(22px,3vw,36px);box-shadow:var(--emboss)}
+.sheet h3{margin-bottom:4px}
+.sheet .hint{font-size:.9375rem;color:var(--ink-3);max-width:62ch}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:14px;margin-top:18px}
+.fld{display:flex;flex-direction:column;gap:7px;min-width:0}
+.fld label{font-size:var(--t-meta);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:500}
+.fld select,.fld input{appearance:none;-webkit-appearance:none;width:100%;min-height:48px;padding:12px 14px;
+  border-radius:12px;border:1px solid var(--hairline);background:var(--surface);color:var(--ink);
+  font:inherit;font-size:1rem;transition:border-color .18s}
+.fld select{background-image:linear-gradient(45deg,transparent 50%,currentColor 50%),linear-gradient(135deg,currentColor 50%,transparent 50%);
+  background-position:calc(100% - 19px) calc(50% + 2px),calc(100% - 14px) calc(50% + 2px);
+  background-size:5px 5px,5px 5px;background-repeat:no-repeat;padding-inline-end:38px}
+.fld select:hover,.fld input:hover{border-color:var(--hairline-2)}
+.fld select:focus-visible,.fld input:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-color:var(--accent)}
+.readout{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--hairline);
+  border:1px solid var(--hairline);border-radius:14px;overflow:hidden;margin-top:24px}
+.readout div{background:var(--surface);padding:15px 18px}
+.readout b{display:block;font-size:var(--t-meta);letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-3);font-weight:500;margin-bottom:5px}
+.readout span{font-family:var(--font-display);font-size:1.35rem;font-weight:700;color:var(--ink);letter-spacing:-.01em}
+.warn{margin-top:14px;font-size:.9375rem;line-height:1.55;color:var(--ink-2)}
+.warn b{color:var(--accent-text);font-weight:600}
+.seg{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.seg label{position:relative;cursor:pointer}
+.seg input{position:absolute;inset:0;opacity:0;width:100%;height:100%;cursor:pointer;margin:0}
+.seg span{display:inline-flex;align-items:center;min-height:48px;padding:12px 22px;border-radius:999px;
+  border:1px solid var(--hairline);color:var(--ink);font-weight:600;font-size:.9375rem;transition:all .18s}
+.seg input:checked+span{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.seg input:focus-visible+span{outline:2px solid var(--accent);outline-offset:3px}
+.subfld{margin-top:16px;display:none}
+.subfld.on{display:block}
+.out{width:100%;min-height:168px;margin-top:22px;padding:16px 18px;border-radius:14px;
+  border:1px solid var(--hairline);background:var(--surface);color:var(--ink);
+  font:inherit;font-size:.9375rem;line-height:1.65;resize:vertical}
+.out:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.sheet-act{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;align-items:center}
+.sheet-note{font-size:var(--t-meta);letter-spacing:.06em;color:var(--ink-3);margin-top:16px}
+
 .visit{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);margin-top:48px;align-items:start}
 .facts{display:grid;gap:1px;background:var(--hairline);border:1px solid var(--hairline);border-radius:18px;overflow:hidden}
 .fact{background:var(--card);padding:20px 24px}
@@ -251,6 +291,7 @@ footer{border-top:1px solid var(--hairline);padding-block:40px}
       <a href="#undertaking">Warranty</a>
       <a href="#routes">How to buy</a>
       <a href="#work">What we do</a>
+      <a href="#order">Order</a>
       <a href="#visit">Visit</a>
     </div>
     <div class="navtools">
@@ -270,6 +311,7 @@ footer{border-top:1px solid var(--hairline);padding-block:40px}
   <a href="#undertaking">Warranty</a>
   <a href="#routes">How to buy</a>
   <a href="#work">What we do</a>
+  <a href="#order">Order</a>
   <a href="#visit">Visit</a>
   <a href="ar/" hreflang="ar" lang="ar">العربية</a>
 </div>
@@ -386,8 +428,8 @@ footer{border-top:1px solid var(--hairline);padding-block:40px}
 <section id="work">
   <div class="wrap">
     <p class="num" data-reveal>03 — What we do</p>
-    <h2 data-reveal style="margin-top:14px">Seven jobs, one bay.</h2>
-    <p data-reveal style="margin-top:18px">Not just a counter. There is a lift in the workshop, and these are the services written on our own signboard.</p>
+    <h2 data-reveal style="margin-top:14px">Seven jobs, one bay — and we ship.</h2>
+    <p data-reveal style="margin-top:18px">Not just a counter. There is a lift in the workshop. The first seven are the services written on our own signboard; delivery is the eighth, for the orders that never come to the shop at all.</p>
 
     <ul class="svc" data-reveal>
       <li>Tyres</li>
@@ -397,6 +439,7 @@ footer{border-top:1px solid var(--hairline);padding-block:40px}
       <li>Battery</li>
       <li>Oil change</li>
       <li>Repairs</li>
+      <li>Delivery</li>
     </ul>
 
     <div class="shots2">
@@ -418,9 +461,73 @@ footer{border-top:1px solid var(--hairline);padding-block:40px}
   </div>
 </section>
 
-<section id="visit" style="background:var(--surface)">
+<section id="order" style="background:var(--surface)">
   <div class="wrap">
-    <p class="num" data-reveal>04 — Visit</p>
+    <p class="num" data-reveal>04 — Order sheet</p>
+    <h2 data-reveal style="margin-top:14px">Get the size right first.</h2>
+    <p data-reveal style="margin-top:18px">Your size is moulded into the side of the tyre you already have — something like 205/55 R16. Read it off, set it below, and this sheet writes the request for you, delivery included.</p>
+
+    <div class="sheet" data-reveal>
+      <h3>Your tyre</h3>
+      <p class="hint">Three numbers on the sidewall: width in millimetres, profile, then the rim size after the R.</p>
+
+      <div class="row">
+        <div class="fld"><label for="w">Width</label><select id="w"></select></div>
+        <div class="fld"><label for="a">Profile</label><select id="a"></select></div>
+        <div class="fld"><label for="r">Rim</label><select id="r"></select></div>
+        <div class="fld"><label for="q">How many</label>
+          <select id="q"><option>1</option><option>2</option><option selected>4</option><option>5</option><option>6</option></select></div>
+      </div>
+
+      <div class="readout">
+        <div><b>Your size</b><span id="o-size">—</span></div>
+        <div><b>Overall diameter</b><span id="o-dia">—</span></div>
+        <div><b>Rolling circumference</b><span id="o-cir">—</span></div>
+        <div><b>Turns per km</b><span id="o-rev">—</span></div>
+      </div>
+
+      <div style="margin-top:28px">
+        <h3>Thinking of a different size?</h3>
+        <p class="hint">Optional. Change anything below and we will tell you how far it moves your speedometer.</p>
+        <div class="row">
+          <div class="fld"><label for="w2">Width</label><select id="w2"></select></div>
+          <div class="fld"><label for="a2">Profile</label><select id="a2"></select></div>
+          <div class="fld"><label for="r2">Rim</label><select id="r2"></select></div>
+        </div>
+        <p class="warn" id="o-cmp">Same size as above — nothing changes.</p>
+      </div>
+
+      <div style="margin-top:28px">
+        <h3>How do you want them?</h3>
+        <div class="seg" role="radiogroup" aria-label="How do you want them">
+          <label><input type="radio" name="route" value="In store — fitted while I wait" checked><span>In store</span></label>
+          <label><input type="radio" name="route" value="Pickup — I collect at the counter"><span>Pickup</span></label>
+          <label><input type="radio" name="route" value="Delivery"><span>Delivery</span></label>
+        </div>
+        <div class="subfld" id="ship">
+          <div class="row">
+            <div class="fld" style="grid-column:1/-1"><label for="addr">Where should we deliver?</label>
+              <input id="addr" type="text" autocomplete="street-address" placeholder="Area in Dubai, or the company name"></div>
+          </div>
+          <p class="warn">Coverage and lead time are confirmed on the call — <b>the shop has not published them yet</b>.</p>
+        </div>
+      </div>
+
+      <label for="out" class="sr-only">Your request</label>
+      <textarea id="out" class="out" readonly></textarea>
+
+      <div class="sheet-act">
+        <button type="button" class="btn btn-ghost" id="copyreq">Copy request</button>
+        <a href="tel:+97142390214" class="btn btn-solid">Call 04 239 0214</a>
+      </div>
+      <p class="sheet-note">This sheet does not quote a price. The shop has no published price list — read the request out on the phone and they will quote it.</p>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <p class="num" data-reveal>05 — Visit</p>
     <h2 data-reveal style="margin-top:14px">Ras Al Khor Industrial Area 2.</h2>
 
     <div class="visit">
@@ -584,6 +691,84 @@ footer{border-top:1px solid var(--hairline);padding-block:40px}
       });
     });
   }
+
+  /* ---- order sheet. Pure sidewall geometry — no prices exist to calculate ---- */
+  (function(){
+    var W=document.getElementById("w"); if(!W)return;
+    var A=document.getElementById("a"),R=document.getElementById("r"),Q=document.getElementById("q"),
+        W2=document.getElementById("w2"),A2=document.getElementById("a2"),R2=document.getElementById("r2"),
+        ship=document.getElementById("ship"),addr=document.getElementById("addr"),out=document.getElementById("out");
+
+    function fill(sel,from,to,step,def,suffix){
+      var h="";
+      for(var v=from;v<=to;v+=step)h+='<option value="'+v+'"'+(v===def?" selected":"")+">"+v+(suffix||"")+"</option>";
+      sel.innerHTML=h;
+    }
+    [W,W2].forEach(function(s){fill(s,135,355,5,205)});
+    [A,A2].forEach(function(s){fill(s,25,85,5,55)});
+    [R,R2].forEach(function(s){fill(s,12,24,1,16,'"')});
+
+    function geom(w,a,r){
+      var d=r*25.4+2*(w*a/100);
+      return {d:d,c:Math.PI*d,rev:1e6/(Math.PI*d)};
+    }
+    var fmt=function(n,p){return n.toLocaleString("en-GB",{maximumFractionDigits:p||0})};
+
+    function render(){
+      var w=+W.value,a=+A.value,r=+R.value,g=geom(w,a,r);
+      var size=w+"/"+a+" R"+r;
+      document.getElementById("o-size").textContent=size;
+      document.getElementById("o-dia").textContent=fmt(g.d)+" mm";
+      document.getElementById("o-cir").textContent=fmt(g.c)+" mm";
+      document.getElementById("o-rev").textContent=fmt(g.rev);
+
+      var w2=+W2.value,a2=+A2.value,r2=+R2.value,alt=(w2!==w||a2!==a||r2!==r);
+      var size2=w2+"/"+a2+" R"+r2, cmp=document.getElementById("o-cmp"), diff=0;
+      if(!alt){
+        cmp.innerHTML="Same size as above — nothing changes.";
+      }else{
+        var g2=geom(w2,a2,r2);
+        diff=(g2.d-g.d)/g.d*100;
+        var shown=100*g.d/g2.d;
+        var verdict = Math.abs(diff)<=3
+          ? "<b>Within the usual 3% tolerance.</b> Fitment still has to be checked against your car."
+          : "<b>Outside the 3% tolerance</b> most carmakers allow — ask us before you commit.";
+        cmp.innerHTML=size2+" stands "+fmt(g2.d)+" mm tall, "+(diff>0?"+":"")+diff.toFixed(1)+
+          "% versus "+size+". At a true 100 km/h your speedometer would read about "+
+          shown.toFixed(0)+" km/h. "+verdict;
+      }
+
+      var route=document.querySelector('input[name="route"]:checked');
+      var isShip=route.value==="Delivery";
+      ship.classList.toggle("on",isShip);
+
+      var lines=["Hello SHATI ALWAHA, I would like a quote.",
+                 "","Size: "+size,"Quantity: "+Q.value];
+      if(alt)lines.push("Also considering: "+size2+" ("+(diff>0?"+":"")+diff.toFixed(1)+"% diameter)");
+      lines.push("");
+      if(isShip){
+        lines.push("Delivery to: "+((addr.value||"").trim()||"[area or company name]"));
+        lines.push("Please confirm whether you cover it, the lead time and the price.");
+      }else{
+        lines.push(route.value);
+        lines.push("Please confirm availability and the price.");
+      }
+      out.value=lines.join("\n");
+    }
+
+    [W,A,R,Q,W2,A2,R2,addr].forEach(function(el){
+      el.addEventListener("input",render); el.addEventListener("change",render);
+    });
+    document.querySelectorAll('input[name="route"]').forEach(function(el){el.addEventListener("change",render)});
+
+    var cb=document.getElementById("copyreq");
+    cb.addEventListener("click",function(){
+      navigator.clipboard.writeText(out.value).then(function(){
+        cb.textContent="Copied"; setTimeout(function(){cb.textContent="Copy request"},1600);
+      },function(){ out.focus(); out.select(); });
+    });
+    render();
+  })();
 
   var svg=document.getElementById("sidewall"),art=document.querySelector(".hero-art");
   function fitWheel(){
